@@ -17,7 +17,8 @@
             rotulo="REMOVER"
             @botaoAtivado="remove(foto)"
             :confirmacao="true"
-            estilo="perigo" />
+            estilo="perigo"
+          />
         </meu-painel>
       </li>
     </ul>
@@ -70,30 +71,45 @@ export default {
 </script>
 
 <style>
-.centralizado {
+.h1 {
+  font-size: 16px;
+}
+
+h1,
+h2.centralizado {
   text-align: center;
-}
-.lista-fotos {
-  list-style: none;
-}
-.lista-fotos .lista-fotos-item {
-  display: flex;
+  border: 1px solid black;
+  font-family: math;
+  color: white;
+  font-size: 50px;
+  text-transform: uppercase;
+  margin-right: 202px;
+  margin-left: 159px;
+  text-shadow: -1px -1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000,
+    1px 0px 0px #000000;
 }
 
 .filtro {
   display: block;
-  width: 50%;
+  display: block;
+  width: 100%;
   border-radius: 4px;
   color: black;
   font-size: 15px;
-  font-family:math;
-  width: 50%;
+  font-family: math;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
   border: 3px solid black;
   background-color: #ddd9ce;
-  margin-left: 236px;
-
 }
+
+.lista-fotos .lista-fotos-item {
+  display: inline;
+}
+
+.lista-fotos {
+  list-style: none;
+}
+
 </style>

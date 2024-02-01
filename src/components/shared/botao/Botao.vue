@@ -50,7 +50,6 @@ export default {
   border-radius: 3px;
   margin: 10px;
   font-size: 1.2em;
-  margin-left: 172px;
   cursor: pointer;
   font-family: math;
 }

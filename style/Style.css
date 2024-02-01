@@ -4,18 +4,6 @@ ul {
   font-family: sans-serif;
 }
 
-h1,
-h2.centralizado {
-  border: 1px solid black;
-  font-family: math;
-  color: white;
-  font-size: 50px;
-  text-transform: uppercase;
-  margin-right: 202px;
-  margin-left: 159px;
-  text-shadow: -1px -1px 0px #000000, -1px 1px 0px #000000, 1px -1px 0px #000000,
-    1px 0px 0px #000000;
-}
 h2 {
   font-size: 15px;
   font-family: math;
@@ -43,35 +31,12 @@ nav#menu > ul li {
 }
 nav#menu > ul li a {
   padding: 5px 5px;
-  display: inline-block; /* visual do link */
+  display: inline-block;
   color: #333;
   text-decoration: none;
 }
 
 nav#menu > ul li a:hover {
-  display: inline-block; /* visual do link */
+  display: inline-block;
   background-color: #eba67b;
-
-}
-
-@media (max-width: 1000px) {
-
-  .painel .painel-titulo {
-    text-align: center;
-    border: solid 2px;
-    background:#ddd9ce ;
-    margin: 0 0 15px 0;
-    padding: 10px;
-    text-transform: uppercase;
-  }
-  .imagem-responsiva {
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    
-  
-  }
 }

@@ -22,26 +22,29 @@ export default {
 </script>
 
 <style scoped>
-.painel {
- border: solid 2px grey;
-  box-shadow: 5px 5px 10px grey;
-  width: 473px;
-  height: 100%;
-  padding: 25px;
-  margin-left: 159px;
-  margin-top: 28px;
+   .painel {
+    padding: 0 auto;
+    border: solid 2px grey;
+    display: inline-block;
+    margin: 5px;
+    box-shadow: 5px 5px 10px grey;
+    width: 200px;
+    height: 100%;
+    vertical-align: top;
+    text-align: center;
+  }
 
+  * {
+      box-shadow: 5px 5px 5px;
+  }
 
-}
-* {
-  box-shadow: 5px 5px 5px;
-}
-.painel-fade-enter,
-.painel-fade-leave-active {
-  opacity: 0;
-}
-.painel-fade-enter-active,
-.painel-fade-leave-active {
-  transition: opacity 0.4s;
-}
+ .painel-fade-enter, .painel-fade-leave-active {
+
+     opacity: 0;
+ }
+
+ .painel-fade-enter-active, .painel-fade-leave-active {
+
+     transition: opacity .4s;
+ }
 </style>

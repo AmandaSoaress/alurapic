@@ -1,9 +1,9 @@
-# alurapic
+# Alurapic
 
 > A Vue.js project
 
+![preview](src/assets/img/preview.png)
 ## Build Setup
-
 ``` bash
 # install dependencies
 npm install
