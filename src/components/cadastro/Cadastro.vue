@@ -1,5 +1,6 @@
 <template>
   <h2 class="centralizado">Cadrastro</h2>
+  
 </template>
 
 <script></script>
