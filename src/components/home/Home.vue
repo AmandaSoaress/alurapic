@@ -11,7 +11,11 @@
     <ul class="lista-fotos">
       <li class="lista-fotos-item" v-for="foto of fotosComFiltro">
         <meu-painel :titulo="foto.titulo">
-          <imagem-responsiva :url="foto.url" :titulo="foto.titulo" />
+          <imagem-responsiva
+            v-meu-transform:scale.animate="1.2"
+            :url="foto.url"
+            :titulo="foto.titulo"
+          />
           <meu-botao
             tipo="button"
             rotulo="REMOVER"
@@ -29,6 +33,7 @@
 import Painel from "../shared/painel/Painel.vue";
 import ImagemResponsiva from "../shared/imagem-responsiva/ImagemResponsiva.vue";
 import Botao from "../shared/botao/Botao.vue";
+import transform from "../../directives/Transform";
 
 export default {
   components: {
@@ -36,6 +41,11 @@ export default {
     "imagem-responsiva": ImagemResponsiva,
     "meu-botao": Botao,
   },
+
+  directives: {
+    "meu-transform": transform,
+  },
+
   data() {
     return {
       titulo: "Alurapic",
@@ -111,5 +121,4 @@ h2.centralizado {
 .lista-fotos {
   list-style: none;
 }
-
 </style>
