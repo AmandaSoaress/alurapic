@@ -17,9 +17,7 @@ a {
   text-shadow: -1px -1px 0px #fff, -1px 1px 0px #fff, 1px -1px 0px #fff,
     1px 0px 0px #fff;
 }
-input {
-  color: #ddd9ce;
-}
+
 nav#menu > ul {
   padding: 0px;
   margin: 0px;

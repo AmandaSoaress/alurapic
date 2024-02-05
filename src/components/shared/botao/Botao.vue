@@ -49,20 +49,19 @@ export default {
   padding: 10px;
   border-radius: 3px;
   margin: 10px;
-  font-size: 1.2em;
+
   cursor: pointer;
   font-family: math;
 }
 .botao:hover {
   background-color: black;
- 
 }
 .botao-perigo {
   background: firebrick;
   color: white;
 }
 .botao-padrao {
-  background: rgb(204, 207, 18);
+  background: rgb(38, 112, 60);
   color: white;
 }
 </style>

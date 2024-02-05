@@ -85,8 +85,7 @@ export default {
   font-size: 16px;
 }
 
-h1,
-h2.centralizado {
+h1 {
   text-align: center;
   border: 1px solid black;
   font-family: math;
@@ -99,7 +98,8 @@ h2.centralizado {
     1px 0px 0px #000000;
 }
 
-.filtro {
+input, textarea{
+
   display: block;
   display: block;
   width: 100%;
@@ -111,7 +111,7 @@ h2.centralizado {
   margin: 8px 0;
   box-sizing: border-box;
   border: 3px solid black;
-  background-color: #ddd9ce;
+  background: #ddd9ce;
 }
 
 .lista-fotos .lista-fotos-item {
