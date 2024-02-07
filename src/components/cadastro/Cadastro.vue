@@ -6,33 +6,22 @@
     <form @submit.prevent="grava()">
       <div class="controle">
         <label for="titulo">TÍTULO</label>
-        <input
-          id="titulo"
-          autocomplete="off"
-          @input="foto.titulo = $event.target.value"
-          :value="foto.titulo"
-        />
+        <input id="titulo" autocomplete="off" v-model.lazy="foto.titulo" />
       </div>
 
       <div class="controle">
         <label for="url">URL</label>
-        <input
-          id="url"
-          autocomplete="off"
-          @input="foto.url = $event.target.value"
-          :value="foto.url"
+        <input id="url" autocomplete="off" v-model.lazy="foto.url" />
+        <imagem-responsiva
+          v-show="foto.url"
+          :url="foto.url"
+          :titulo="foto.titulo"
         />
-        <imagem-responsiva />
       </div>
 
       <div class="controle">
         <label for="descricao">DESCRIÇÃO</label>
-        <textarea
-          id="descricao"
-          autocomplete="off"
-          @input="foto.descricao = $event.target.value"
-          :value="foto.descricao"
-        >
+        <textarea id="descricao" autocomplete="off" v-model="foto.descricao">
         </textarea>
       </div>
 
@@ -49,6 +38,8 @@
 <script>
 import ImagemResponsiva from "../shared/imagem-responsiva/ImagemResponsiva.vue";
 import Botao from "../shared/botao/Botao.vue";
+import Foto from "../../domain/foto/Foto";
+import FotoService from "../../domain/foto/FotoService";
 
 export default {
   components: {
@@ -57,23 +48,20 @@ export default {
   },
   data() {
     return {
-      foto: {
-        titulo: "",
-        url: "",
-        descricao: "",
-      },
+      foto: new Foto(),
     };
   },
 
   methods: {
+
     grava() {
-      console.log("enviar dados para a API");
-      this.foto = {
-        titulo: "",
-        url: "",
-        descricao: ""
-      };
+      this.service
+      .cadastra(this.foto)
+      .then(() => this.foto = new Foto(), (err) => console.log(err));
     },
+  },
+  created() {
+    this.service = new FotoService(this.$resource);
   },
 };
 </script>
