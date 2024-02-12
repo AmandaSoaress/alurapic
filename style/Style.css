@@ -1,5 +1,4 @@
-body,
-ul {
+body,ul {
   background: linear-gradient(to top left, #eba67b 20%, #a3501c 100%);
   font-family: sans-serif;
 }

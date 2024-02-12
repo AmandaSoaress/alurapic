@@ -46,10 +46,7 @@ export default {
 <style>
 .botao {
   display: inline-block;
-  padding: 10px;
-  border-radius: 3px;
-  margin: 10px;
-
+  padding: 5px;
   cursor: pointer;
   font-family: math;
 }

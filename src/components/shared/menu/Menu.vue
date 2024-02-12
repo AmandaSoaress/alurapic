@@ -3,7 +3,8 @@
     <ul>
       <li v-for="rota in rotas">
         <router-link :to="rota.path ? rota.path : '/'">
-          {{ rota.titulo }}</router-link>
+          {{ rota.titulo }}</router-link
+        >
       </li>
     </ul>
   </nav>
@@ -12,10 +13,10 @@
 export default {
   props: {
     rotas: {
-        type: Array,
-        required: true
-    }
-  }
-}
+      type: Array,
+      required: true,
+    },
+  },
+};
 </script>
 <style></style>
