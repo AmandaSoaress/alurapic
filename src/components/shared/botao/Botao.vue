@@ -43,22 +43,6 @@ export default {
 };
 </script>
 
-<style>
-.botao {
-  display: inline-block;
-  padding: 5px;
-  cursor: pointer;
-  font-family: math;
-}
-.botao:hover {
-  background-color: black;
-}
-.botao-perigo {
-  background: firebrick;
-  color: white;
-}
-.botao-padrao {
-  background: rgb(38, 112, 60);
-  color: white;
-}
+<style lang="sass">
+  @import './Botao.scss';
 </style>
