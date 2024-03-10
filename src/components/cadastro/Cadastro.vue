@@ -38,6 +38,7 @@
           v-show="foto.url"
           :url="foto.url"
           :titulo="foto.titulo"
+          :grande="true"
         />
       </div>
 
@@ -79,13 +80,22 @@ export default {
     grava() {
       this.$validator.validateAll().then((success) => {
         if (success) {
-          this.service.cadastra(this.foto).then(
-            () => {
-              if (this.id) this.$router.push({ name: "home" });
-              this.foto = new Foto();
-            },
-            (err) => console.log(err)
-          );
+          if (this.id) {
+            this.service.atualiza(this.foto).then(
+              () => {
+                this.$router.push({ name: "home" });
+              },
+              (err) => console.log(err)
+            );
+          } else {
+            this.service.cadastra(this.foto).then(
+              () => {
+                this.foto = new Foto();
+                this.$router.push({ name: "home" });
+              },
+              (err) => console.log(err)
+            );
+          }
         }
       });
     },
