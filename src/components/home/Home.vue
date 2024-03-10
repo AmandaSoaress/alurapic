@@ -42,7 +42,6 @@ import Painel from "../shared/painel/Painel.vue";
 import ImagemResponsiva from "../shared/imagem-responsiva/ImagemResponsiva.vue";
 import Botao from "../shared/botao/Botao.vue";
 import transform from "../../directives/Transform";
-import Foto from "../../domain/foto/Foto";
 import FotoService from '../../domain/foto/FotoService';
 
 export default {
