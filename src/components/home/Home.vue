@@ -1,6 +1,5 @@
 <template>
   <div>
-  
     <h1 class="centralizado">{{ titulo }}</h1>
     <p v-show="mensagem" class="centralizado">{{ mensagem }}</p>
     <input
@@ -11,14 +10,18 @@
     />
 
     <ul class="lista-fotos">
-      <li class="lista-fotos-item" v-for="foto of fotosComFiltro" :key="foto._id">
+      <li
+        class="lista-fotos-item"
+        v-for="foto of fotosComFiltro"
+        :key="foto._id"
+      >
         <meu-painel :titulo="foto.titulo">
           <imagem-responsiva
             v-meu-transform:scale.animate="1.2"
             :url="foto.url"
             :titulo="foto.titulo"
           />
-          <router-link :to="{name:'altera', params: { id: foto._id} }">
+          <router-link :to="{ name: 'altera', params: { id: foto._id } }">
             <meu-botao tipo="button" rotulo="ALTERAR"></meu-botao>
           </router-link>
           <meu-botao
@@ -76,8 +79,7 @@ export default {
       this.service.apaga(foto._id)
       .then(
         () => {
-          let indice = this.fotos.indexOf(foto);
-          this.fotos.splice(indice, 1);
+          this.service.lista().then(fotos => this.fotos = fotos, err => this.mensagem = err.message)
           this.mensagem = "Foto removida com sucesso";
         },
         (err) => {
@@ -88,12 +90,8 @@ export default {
   },
   created() {
    this.service = new FotoService(this.$resource)
-   this.service
-   .lista()
-      .then(fotos => this.fotos = fotos, err => this.mensagem = err.message
-      )}
+   this.service.lista().then(fotos => this.fotos = fotos, err => this.mensagem = err.message)}
   }
-
 </script>
 
 <style>
