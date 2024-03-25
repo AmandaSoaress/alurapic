@@ -1,0 +1,40 @@
+body,ul {
+  background: linear-gradient(to top left, #eba67b 20%, #a3501c 100%);
+  font-family: sans-serif;
+}
+
+
+h2 {
+  font-size: 15px;
+  font-family: math;
+}
+
+a {
+  color: black;
+  font-size: 20px;
+  font-family: math;
+  margin: 5px 10px 15px 20px;
+  text-shadow: -1px -1px 0px #fff, -1px 1px 0px #fff, 1px -1px 0px #fff,
+    1px 0px 0px #fff;
+}
+
+nav#menu > ul {
+  padding: 0px;
+  margin: 0px;
+  background-color: #ededed;
+  list-style: none;
+}
+nav#menu > ul li {
+  display: inline;
+}
+nav#menu > ul li a {
+  padding: 5px 5px;
+  display: inline-block;
+  color: #333;
+  text-decoration: none;
+}
+
+nav#menu > ul li a:hover {
+  display: inline-block;
+  background-color: #eba67b;
+}
